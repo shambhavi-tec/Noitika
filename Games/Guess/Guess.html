@@ -1,0 +1,37 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Word Guessing Game</title>
+    <link rel="stylesheet" 
+          href="guessstyle.css" />
+       <script src="./script.js"></script>
+</head>
+
+<body>
+    <div class="card">
+        <h1>Guess the word</h1>
+        <p>
+              <b>Hint:</b> A programming language
+          </p>
+        <p id="displayWord"></p>
+        <p>Guess one letter:
+
+            <input type="text" 
+                   maxlength="1" 
+                   id="letter-input">
+        </p>
+        <button onclick="guessLetter()">
+              Submit
+          </button>
+    </div>
+
+<script type="module">
+  import { setupPostureModal } from "../../posture-modal.js";
+  setupPostureModal(15); // Reminder every 15 minutes
+</script>
+</body>
+
+</html>

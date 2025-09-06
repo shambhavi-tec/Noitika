@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOITIKA - Games Hub</title>
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&family=Outfit:wght@100..900&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+  <nav>
+    <div class="brand">NOITIKÁ</div>
+    <div class="nav-toggle" onclick="toggleMenu()">
+      <i class='bx bx-menu'></i>
+    </div>
+    <div class="nav-links" id="navLinks">
+      <a href="#"><i class='bx bx-home-alt'></i><span class="link-text">Home</span></a>
+      <a href="#"><i class='bx bx-info-circle'></i><span class="link-text">About Us</span></a>
+      <div class="nav-search">
+        <input type="text" placeholder="Search games..." aria-label="Search games">
+      </div>
+      <div class="social-icons">
+        <a href="#"><i class='bx bxl-google'></i></a>
+        <a href="#"><i class='bx bxl-facebook'></i></a>
+        <a href="#"><i class='bx bxl-github'></i></a>
+        <a href="#"><i class='bx bxl-linkedin'></i></a>
+      </div>
+      <div class="theme-toggle" onclick="toggleTheme()">
+        <i class='bx bx-moon'></i>
+      </div>
+      <div class="auth-buttons">
+        <button id="login-button" class="auth-btn"><i class='bx bx-log-in'></i> Login</button>
+        <button id="logout-button" class="auth-btn" style="display: none;"><i class='bx bx-log-out'></i> Logout</button>
+        <span id="user-welcome" class="user-welcome"></span>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="animation">
+    <h1>Welcome to Noitiká!</h1>
+  </div>
+  
+  <div id="posture-button-container">
+    <button id="test-posture-alert">
+      <i class='bx bx-spa'></i> Posture Check
+    </button>
+  </div>
+
+  <section class="game-grid">
+    <div class="game-card">
+      <img src="screenshots/2048.png" alt="2048 Game Screenshot">
+      <div class="game-card-content">
+        <h3>2048</h3>
+        <p>Slide numbered tiles to merge and reach 2048!</p>
+        <a href="Games/2048-master/2048.html">Play</a>
+      </div>
+    </div>
+
+    <div class="game-card">
+      <img src="screenshots/wordle.png" alt="Wordle Game Screenshot">
+      <div class="game-card-content">
+        <h3>Wordle</h3>
+        <p>Guess a hidden 5-letter word in six tries.</p>
+        <a href="Games/Wordle-master/Wordle-master/wordle.html">Play</a>
+      </div>
+    </div>
+
+    <div class="game-card">
+      <img src="screenshots/rock.png" alt="Rock Paper Scissors Screenshot">
+      <div class="game-card-content">
+        <h3>Rock Paper Scissors</h3>
+        <p>Challenge the computer in this simple hand game.</p>
+        <a href="Games/rock-paper-scissors-master/rock-paper-scissors-master/Rock.html">Play</a>
+      </div>
+    </div>
+
+    <div class="game-card">
+      <img src="screenshots/memory.png" alt="Memory Tiles Screenshot">
+      <div class="game-card-content">
+        <h3>Memory Tiles</h3>
+        <p>Test your memory skills in this colorful puzzle game with increasing difficulty!</p>
+        <a href="Games/Memory Game/memory.html">Play</a>
+      </div>
+    </div>
+
+    <div class="game-card">
+      <img src="screenshots/guess.png" alt="Word Guessing Screenshot">
+      <div class="game-card-content">
+        <h3>Word Guessing</h3>
+        <p>Guess the hidden word one letter at a time!</p>
+        <a href="Games/Guess/Guess.html">Play</a>
+      </div>
+    </div>
+
+    <div class="game-card">
+      <img src="screenshots/hangman.png" alt="Hangman Game Screenshot">
+      <div class="game-card-content">
+        <h3>Hangman</h3>
+        <p>Guess right, save him – wrong, he hangs</p>
+        <a href="Games/hangman/hangman.html">Play</a>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+  <script type="module">
+    import { setupPostureModal } from "./posture-modal.js";
+    setupPostureModal(15);
+  </script>
+</body>
+</html>

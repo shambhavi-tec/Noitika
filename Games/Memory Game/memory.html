@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title>Enhanced Memory Game</title>
+  <link rel="stylesheet" href="memorystyle.css">
+</head>
+<body>
+  <div class="game-container">
+    <h1>🧠 Memory Game</h1>
+    
+    <div class="game-stats">
+      <div class="stat-item">
+        <div class="stat-label">Score</div>
+        <div class="stat-value" id="score">0</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-label">Matches</div>
+        <div class="stat-value" id="matches">0</div>
+      </div>
+    </div>
+
+    <div class="grid" id="grid">
+    </div>
+
+    <div class="controls">
+      <button class="btn" onclick="startNewGame()">New Game</button>
+      <button class="btn" onclick="resetGame()">Reset</button>
+    </div>
+
+    <div class="game-message" id="gameMessage"></div>
+  </div>
+
+  <script src="app.js"></script>
+  <script type="module">
+    import { setupPostureModal } from "../../posture-modal.js";
+    setupPostureModal(15); // Reminder every 15 minutes
+  </script>
+</body>
+</html>

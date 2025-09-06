@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="hangmanstyle.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Hangman</h1>
+            <div class="score-display">
+                <span>Score: <span id="score">0</span></span>
+                <span>High Score: <span id="high-score">0</span></span>
+            </div>
+        </header>
+
+        <div class="game-container">
+            <div class="hangman-container">
+                <svg id="hangman-svg" viewBox="0 0 200 200">
+                    <!-- Base -->
+                    <line class="hangman-part" x1="20" y1="180" x2="100" y2="180" style="display: none;"/>
+                    <!-- Pole -->
+                    <line class="hangman-part" x1="60" y1="180" x2="60" y2="20" style="display: none;"/>
+                    <!-- Top -->
+                    <line class="hangman-part" x1="60" y1="20" x2="140" y2="20" style="display: none;"/>
+                    <!-- Rope -->
+                    <line class="hangman-part" x1="140" y1="20" x2="140" y2="40" style="display: none;"/>
+                    <!-- Head -->
+                    <circle class="hangman-part" cx="140" cy="50" r="10" style="display: none;"/>
+                    <!-- Body -->
+                    <line class="hangman-part" x1="140" y1="60" x2="140" y2="100" style="display: none;"/>
+                    <!-- Left Arm -->
+                    <line class="hangman-part" x1="140" y1="70" x2="120" y2="80" style="display: none;"/>
+                    <!-- Right Arm -->
+                    <line class="hangman-part" x1="140" y1="70" x2="160" y2="80" style="display: none;"/>
+                    <!-- Left Leg -->
+                    <line class="hangman-part" x1="140" y1="100" x2="120" y2="120" style="display: none;"/>
+                    <!-- Right Leg -->
+                    <line class="hangman-part" x1="140" y1="100" x2="160" y2="120" style="display: none;"/>
+                </svg>
+            </div>
+
+            <div class="game-info">
+                <div class="word-display" id="word-display"></div>
+                <div class="wrong-letters" id="wrong-letters"></div>
+                <div class="message" id="message"></div>
+                <div class="keyboard" id="keyboard"></div>
+                <button class="btn" id="new-game-btn">New Game</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="hangmanscript.js"></script>
+    <script type="module">
+  import { setupPostureModal } from "../../posture-modal.js";
+  setupPostureModal(15); // Reminder every 15 minutes
+</script>
+</body>
+</html>
